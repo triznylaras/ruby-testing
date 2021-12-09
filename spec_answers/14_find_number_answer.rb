@@ -92,11 +92,10 @@ describe FindNumber do
     end
 
     context 'when min is 8 and max is 9' do
-      subject(:game_eight) { described_class.new(8, 9, number_guessing) }
+      subject { described_class.new(8, 9, number_guessing) }
 
       it 'returns 8' do
-        guess = game_eight.make_guess
-        expect(guess).to eq(8)
+        expect(subject.make_guess).to eq(8)
       end
     end
 
